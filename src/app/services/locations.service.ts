@@ -6,7 +6,7 @@ import { Location } from '../../models/Location';
 @Injectable({ providedIn: 'root' })
 export class LocationsService
 {
-  private api = 'http://localhost:3000/locations';
+  private api = 'https://lost-and-found-api-xfol.onrender.com/locations';
 
   constructor(private http: HttpClient) { }
 

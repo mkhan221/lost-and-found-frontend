@@ -19,7 +19,7 @@ export interface User
 })
 export class UsersService
 {
-  private apiUrl = 'http://localhost:3000/users'; // adjust API URL
+  private apiUrl = 'https://lost-and-found-api-xfol.onrender.com/users'; 
 
   constructor(private http: HttpClient) { }
 

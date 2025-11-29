@@ -6,7 +6,7 @@ import { Item } from '../../models/Item';
 @Injectable({ providedIn: 'root' })
 export class ItemsService
 {
-  private api = 'http://localhost:3000/items';
+  private api = 'https://lost-and-found-api-xfol.onrender.com/items';
 
   constructor(private http: HttpClient) { }
 

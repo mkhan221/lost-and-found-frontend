@@ -8,7 +8,7 @@ import { UserItemDetails } from '../../models/UserItemDetails';
 @Injectable({ providedIn: 'root' })
 export class UserItemsService
 {
-  private api = 'http://localhost:3000/useritems';
+  private api = 'https://lost-and-found-api-xfol.onrender.com/useritems';
 
   constructor(private http: HttpClient) { }
 
