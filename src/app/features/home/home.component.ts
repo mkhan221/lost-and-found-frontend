@@ -35,21 +35,25 @@ export class HomeComponent implements OnInit
 
 
   loadItems(): void
-  {
-    this.loading = true;
-    this.userItemsService.getAll().subscribe({
-      next: (data) =>
-      {
-        this.items = data;
-        this.loading = false;
-      },
-      error: (err) =>
-      {
-        console.error('Error loading items', err);
-        this.loading = false;
-      }
-    });
-  }
+{
+  this.loading = true;
+
+  this.userItemsService.getAll().subscribe({
+    next: (data) =>
+    {
+      // Hide claimed items from dashboard
+      this.items = data.filter(item => !item.isfound);
+
+      this.loading = false;
+    },
+    error: (err) =>
+    {
+      console.error('Error loading items', err);
+      this.loading = false;
+    }
+  });
+}
+
 
   signOut(): void
   {
